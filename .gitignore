@@ -1,0 +1,8 @@
+node_modules
+cypress/screenshots
+cypress/videos
+results
+AdminData.js
+TestData.js
+package-lock.json
+cypress/fixtures

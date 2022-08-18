@@ -1,0 +1,26 @@
+{
+  "name": "cypress-automation",
+  "version": "1.0.0",
+  "description": "Cypress Automation",
+  "main": "index.js",
+  "scripts": {
+    "openCypress": "npx cypress open",
+    "favourite": "npx cypress run --spec cypress/integration/Campaign/Favourite.js",
+    "Intermediate": "npx cypress run --spec cypress/integration/IntermediaryInvestor/Intermediary.js"
+  },
+  "author": "Khubaib Ch",
+  "license": "ISC",
+  "devDependencies": {
+    "@testing-library/cypress": "^8.0.3",
+    "cypress": "^9.3.1",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-multi-reporters": "^1.5.0",
+    "cypress-xpath": "^1.6.2",
+    "mocha": "^9.2.2",
+    "mocha-junit-reporter": "^2.0.2"
+  },
+  "dependencies": {
+    "cypress-promise": "^1.1.0",
+    "cypress-real-events": "^1.7.1"
+  }
+}

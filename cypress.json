@@ -1,0 +1,8 @@
+{
+    "pageLoadTimeout": 30000,
+    "experimentalFetchPolyfill": true,
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+      "configFile": "reporter-config.json"
+    }
+  }
