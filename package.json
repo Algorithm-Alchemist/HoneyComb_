@@ -11,8 +11,9 @@
   "author": "Khubaib Ch",
   "license": "ISC",
   "devDependencies": {
+    "@faker-js/faker": "^7.5.0",
     "@testing-library/cypress": "^8.0.3",
-    "cypress": "^9.3.1",
+    "cypress": "^10.9.0",
     "cypress-file-upload": "^5.0.8",
     "cypress-multi-reporters": "^1.5.0",
     "cypress-xpath": "^1.6.2",
@@ -20,6 +21,7 @@
     "mocha-junit-reporter": "^2.0.2"
   },
   "dependencies": {
+    "compare-pdf": "^1.1.8",
     "cypress-promise": "^1.1.0",
     "cypress-real-events": "^1.7.1"
   }

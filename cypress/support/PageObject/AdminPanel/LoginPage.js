@@ -14,6 +14,5 @@ class LoginPage_PO{
    //  ).click();
    
    }
-
 }
 export default LoginPage_PO;

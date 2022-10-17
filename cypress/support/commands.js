@@ -70,6 +70,18 @@ Cypress.Commands.add('getByAriaLabel', (selector, ...args)=> {
   return cy.get(`[aria-label="${selector}"]`, ...args);
 });
 
+Cypress.Commands.add('getBySpanAriaLabel', (selector, ...args)=> {
+  return cy.get(`span[aria-label="${selector}"]`, ...args);
+});
+
+Cypress.Commands.add('getByDataIcon', (selector, ...args)=> {
+  return cy.get(`[data-icon="${selector}"]`, ...args);
+});
+
+Cypress.Commands.add('getBySVGDataIcon', (selector, ...args)=> {
+  return cy.get(`[data-icon="${selector}"]`, ...args);
+});
+
 Cypress.Commands.add('getByDataMenuID', (selector, ...args)=> {
   return cy.get(`[data-menu-id="${selector}"]`, ...args);
 });
@@ -78,8 +90,29 @@ Cypress.Commands.add('getByHref', (selector, ...args)=> {
   return cy.get(`[href="${selector}"]`, ...args);
 });
 
+Cypress.Commands.add('getByAHref', (selector, ...args)=> {
+  return cy.get(`a[href="${selector}"]`, ...args);
+});
+
 Cypress.Commands.add('getByTitle', (selector, ...args)=> {
   return cy.get(`[title="${selector}"]`, ...args);
 });
 
+Cypress.Commands.add('getByTitleRetryUser', (selector, ...args)=> {
+  return cy.get(`[title="retry SMITH - ${selector}"]`, ...args);
+});
+
+Cypress.Commands.add('getByOwnerTitle', (selector, ...args)=> {
+  return cy.get(`[title="JOHN SMITH - ${selector}"]`, ...args);
+});
+
+Cypress.Commands.add('getByButtonType', (selector, ...args)=> {
+  return cy.get(`button[type="${selector}"]`, ...args);
+});
+
+Cypress.Commands.add('forceVisit', url => {
+  cy.window().then(win => {
+      return win.open(url, '_self'); 
+    });
+});
 

@@ -1,8 +1,10 @@
 const td = require('../../../../TestData')
 import {CPdetails} from '../../../../AdminData'
+import {CBdetails} from '../../../../AdminData'
+import CreateBussiness_PO from './CreateBussinessPage';
 
 class CreateCampaign_PO {
-
+     createbusiness_po = new CreateBussiness_PO();
     CreateCampaign() 
     {
         cy.getByClass('ant-menu-title-content').each(($el,index,$list)=> {
@@ -14,7 +16,7 @@ class CreateCampaign_PO {
         cy.get("#campaignName").type(CPdetails.CampaignName);
         cy.get("#issuerId").click();
         cy.get("#issuerId")
-        .type(CPdetails.CampaignName)
+        .type(this.createbusiness_po.IsuerName)
         .type('{enter}');  
         //cy.get('[title="coman"]').click();
         cy.get('#campaignStartDate').click();
@@ -43,7 +45,6 @@ class CreateCampaign_PO {
         cy.get('[title="1"]').click();
         cy.get('.ant-form-item-control-input-content > .ant-btn > span').click();
         cy.wait(6000);
-        cy.get('[aria-label="logout"]').click();
     }
 
 }
